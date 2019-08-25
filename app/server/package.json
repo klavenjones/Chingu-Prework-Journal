@@ -4,7 +4,9 @@
   "description": "Journal App Server",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "author": "Klaven Jones",
   "license": "MIT",
@@ -15,6 +17,7 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "mongoose": "^5.6.10",
+    "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0"
   }
