@@ -6,3 +6,4 @@ export * from "./NoteForm";
 export * from "./EditNote";
 export * from "./Login";
 export * from "./Register";
+export * from "./Alert";

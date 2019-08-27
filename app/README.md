@@ -3,6 +3,8 @@ A Simple Journal Application
 
 This is a MERN stack application that will allow users to sign up and log in, and make personal notes for themselves.
 
+The client was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ## Quick Start
 
 * Change the file in database.js. 

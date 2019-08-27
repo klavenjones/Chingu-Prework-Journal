@@ -50,7 +50,7 @@ const App = () => {
         isLoggedIn={isAuthenticated}
         updateCurrentUser={updateCurrentUser}
       />
-      <div className="container">
+      <div className="container-fluid px-0">
         <Route
           exact
           path="/"
