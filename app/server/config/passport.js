@@ -41,14 +41,18 @@ module.exports = passport => {
           User.findOne({ email })
             .populate("posts")
             .then(user => {
-              if (!user) return done(null, false, "USER NOT FOUND");
+              if (!user) return done(null, false, "User does not exist");
               if (!user.validatePassword(password))
-                return done(null, false, "Password does not match");
+                return done(
+                  null,
+                  false,
+                  "Password and user combination does not match"
+                );
 
               return done(null, user);
             })
             .catch(err => {
-              if (err) return done(errors);
+              if (err) return done(err);
             });
         });
       }

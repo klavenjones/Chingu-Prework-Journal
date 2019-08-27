@@ -7,11 +7,9 @@ const app = express();
 const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const passport = require("passport");
-
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
-
 const config = require("./config");
 
 /*
