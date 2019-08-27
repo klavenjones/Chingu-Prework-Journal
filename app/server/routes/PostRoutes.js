@@ -22,6 +22,7 @@ router.put("/:id", middleWare.checkPostOwnerShip, PostController.update);
 /*
  * DELETE
  */
+//DELETE POST
 router.delete("/:id", middleWare.checkPostOwnerShip, PostController.remove);
 
 module.exports = router;

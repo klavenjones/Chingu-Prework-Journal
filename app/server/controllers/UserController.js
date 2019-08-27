@@ -42,25 +42,31 @@ module.exports = {
         });
       });
   },
-
+  /**
+   * UserController.isLoggedIn()
+   */
   loggedIn: function(req, res) {
-    let id = req.user._id;
-    UserModel.findOne({ _id: id })
-      .populate("posts")
-      .then(User => {
-        if (!User) {
-          return res.status(404).json({
-            message: "No such User"
+    if (req.user) {
+      let id = req.user._id;
+      UserModel.findOne({ _id: id })
+        .populate("posts")
+        .then(User => {
+          if (!User) {
+            return res.status(404).json({
+              message: "No such User"
+            });
+          }
+          return res.status(200).json({ user: User });
+        })
+        .catch(err => {
+          return res.status(500).json({
+            message: "Error when getting User.",
+            error: err
           });
-        }
-        return res.status(200).json(User);
-      })
-      .catch(err => {
-        return res.status(500).json({
-          message: "Error when getting User.",
-          error: err
         });
-      });
+    } else {
+      res.status(404).json({ user: null });
+    }
   },
 
   /**

@@ -61,7 +61,7 @@ module.exports = {
           user
             .save()
             .then(saved => {
-              res.status(201).json(saved);
+              res.status(201).json(Post);
             })
             .catch(err => {
               return res.status(500).json({
@@ -78,7 +78,6 @@ module.exports = {
         });
     });
   },
-
   /**
    * PostController.update()
    */

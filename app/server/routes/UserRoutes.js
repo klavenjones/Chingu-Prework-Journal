@@ -9,14 +9,12 @@ const middleWare = require("../middleware");
 /*
  * GET
  */
-
 //GET USER
 router.get("/", middleWare.isLoggedIn, UserController.loggedIn);
 //GET A LIST OF USERS
 router.get("/all", UserController.list);
 //SHOW USER
 router.get("/:id", UserController.show);
-
 /*
  * POST
  */
@@ -25,7 +23,12 @@ router.post("/create", UserController.create);
 
 //LOG USER IN
 router.post("/login", passport.authenticate("local-login"), (req, res) => {
-  res.status(200).json(req.user);
+  const { posts, name } = req.user;
+  const loggedInUser = {
+    posts,
+    name
+  };
+  res.status(200).json({ user: loggedInUser });
 });
 
 //LOG USER OUT

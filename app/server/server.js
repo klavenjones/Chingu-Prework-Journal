@@ -8,7 +8,6 @@ const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 const passport = require("passport");
 
-const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -32,8 +31,6 @@ EXPRESS SERVER SETUP - MIDDLEWARE
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// log every request to the console
-app.use(morgan("dev"));
 // read cookies (needed for auth)
 app.use(cookieParser());
 
