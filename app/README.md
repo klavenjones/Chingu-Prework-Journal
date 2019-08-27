@@ -7,6 +7,13 @@ The client was bootstrapped with [Create React App](https://github.com/facebook/
 
 ## Quick Start
 
+### Clone repo then go into the app directory
+
+``````
+ git clone https://github.com/klavenjones/Chingu-Prework-Journal.git
+ cd ../Chingu-Prework-Journal/app
+``````
+
 * Change the file in database.js. 
 * This file is located in the server/config/database.js. 
 * Add your own mongodb uri connection.  
