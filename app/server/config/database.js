@@ -1,3 +1,3 @@
 module.exports = {
-    url: "mongodb://klay:basket12@ds211708.mlab.com:11708/chingu_journal_app"
+    url: "mongodb://<yourname>:<yourpassword>@ds211708.mlab.com:11708/your_db"
 };
