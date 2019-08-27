@@ -11,7 +11,7 @@ const NoteItem = ({ post, getUser }) => {
   };
   return (
     <Fragment>
-      <div className="col-md-4 my-3">
+      <div className="col-lg-4 col-md-6 col-sm-12 my-3">
         <div className="card">
           <div className="card-header">
             <h5 className="card-title">{post.title}</h5>

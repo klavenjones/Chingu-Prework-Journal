@@ -18,13 +18,14 @@ const Home = ({ isLoggedIn, user, getUser }) => {
             Welcome, {user.name}
           </h5>
           <NoteForm getUser={getUser} />
-          <NoteList posts={user.posts} getUser={getUser} />
+          <div className="d-flex flex-wrap mw-100">
+            <NoteList posts={user.posts} getUser={getUser} />
+          </div>
         </div>
       </div>
       <div className="row text-left"></div>
     </Fragment>
   ) : (
-
     <header className="masthead w-100">
       <div className="row h-100 align-items-center">
         <div className="col-12 text-center">
