@@ -24,21 +24,6 @@ const Home = ({ isLoggedIn, user, getUser }) => {
       <div className="row text-left"></div>
     </Fragment>
   ) : (
-    // <div className="row h-100 align-items-center py-5">
-    //   <div className="col-12 text-center">
-    //     <h1 className="mb-5">Hello, welcome to the Journal App</h1>
-    //     <div className="my-5">
-    //       <p className="lead mb-0">
-    //         Welcome back, Please log in to access your notes
-    //       </p>
-    //       <Link to="/login">Log In</Link>
-    //     </div>
-    //     <div>
-    //       <p className="lead mb-0">No account yet? No worries sign up!</p>
-    //       <Link to="/register">Sign Up </Link>
-    //     </div>
-    //   </div>
-    // </div>
 
     <header className="masthead w-100">
       <div className="row h-100 align-items-center">
