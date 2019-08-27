@@ -10,9 +10,9 @@ This is a MERN stack application that will allow users to sign up and log in, an
 * Add your own mongodb uri connection.  
 
 example: 
-
+`````
 url: "mongodb://name:password.mlab.com:11708/your_db"
-
+`````
 
  
 ## Install server dependencies
