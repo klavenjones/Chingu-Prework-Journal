@@ -1,0 +1,39 @@
+# Journal App
+A Simple Journal Application 
+
+This is a MERN stack application that will allow users to sign up and log in, and make personal notes for themselves.
+
+## Quick Start
+
+* Change the file in database.js. 
+* This file is located in the server/config/database.js. 
+* Add your own mongodb uri connection.  
+
+example: 
+
+url: "mongodb://name:password.mlab.com:11708/your_db"
+
+
+ 
+## Install server dependencies
+yarn install or npm install 
+
+## Install client dependencies
+cd client
+yarn install or npm install
+
+## Run both Express & React from the server folder
+cd server
+npm run dev
+
+## Build for production
+cd client
+npm run build
+
+### App Info
+#### Author
+Klaven Jones
+
+Version
+1.0.0
+
