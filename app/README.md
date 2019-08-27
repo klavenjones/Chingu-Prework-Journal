@@ -16,20 +16,26 @@ url: "mongodb://name:password.mlab.com:11708/your_db"
 
  
 ## Install server dependencies
+``````
+cd server
 yarn install or npm install 
-
+``````
 ## Install client dependencies
+
+``````
 cd client
 yarn install or npm install
-
-## Run both Express & React from the server folder
+``````
+### Run both Express & React from the server folder
+``````
 cd server
 npm run dev
-
-## Build for production
+``````
+### Build for production
+``````
 cd client
 npm run build
-
+``````
 ### App Info
 #### Author
 Klaven Jones
