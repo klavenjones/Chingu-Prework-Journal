@@ -1,6 +1,14 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
-const NoteItem = ({ post }) => {
+
+import axios from "axios";
+
+const NoteItem = ({ post, getUser }) => {
+  const onDeleteClick = id => {
+    axios.delete(`/post/${id}`).then(response => {
+      getUser();
+    });
+  };
   return (
     <Fragment>
       <div className="col-md-4 my-3">
@@ -21,7 +29,10 @@ const NoteItem = ({ post }) => {
             >
               Edit
             </Link>
-            <button className="btn btn-danger w-auto" onClick={onDelete}>
+            <button
+              className="btn btn-danger w-auto"
+              onClick={onDeleteClick.bind(this, post._id)}
+            >
               Delete
             </button>
           </div>

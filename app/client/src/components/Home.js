@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { NoteForm, NoteList } from "./";
 
@@ -7,6 +7,7 @@ const Home = ({ isLoggedIn, user, getUser }) => {
     if (isLoggedIn) {
       getUser();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const homeContent = isLoggedIn ? (

@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Redirect } from "react-router-dom";
+
 import axios from "axios";
 
 const Login = ({ updateCurrentUser }) => {
@@ -35,6 +36,7 @@ const Login = ({ updateCurrentUser }) => {
         }
       });
   };
+
   if (redirectLink) {
     return <Redirect to={{ pathname: redirectLink }} />;
   } else {
@@ -56,9 +58,6 @@ const Login = ({ updateCurrentUser }) => {
                     placeholder="Enter email"
                     onChange={handleChange}
                   />
-                  <small id="emailHelp" className="form-text text-muted">
-                    We'll never share your email with anyone else.
-                  </small>
                 </div>
                 <div className="form-group">
                   <label htmlFor="exampleInputPassword1">Password</label>

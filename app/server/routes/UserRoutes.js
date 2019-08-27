@@ -24,6 +24,7 @@ router.post("/create", UserController.create);
 //LOG USER IN
 router.post("/login", passport.authenticate("local-login"), (req, res) => {
   const { posts, name } = req.user;
+
   const loggedInUser = {
     posts,
     name

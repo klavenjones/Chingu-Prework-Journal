@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import { Redirect } from "react-router-dom";
 import axios from "axios";
 const NoteForm = ({ getUser }) => {
   const [state, setState] = useState({ text: "", title: "" });

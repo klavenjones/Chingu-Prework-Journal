@@ -1,4 +1,4 @@
-var UserModel = require("../models/UserModel.js");
+const UserModel = require("../models/UserModel.js");
 
 /**
  * UserController.js

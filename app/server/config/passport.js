@@ -33,6 +33,8 @@ module.exports = passport => {
         passReqToCallback: true //This will allow us to pass the request object to the call back
       },
       (req, email, password, done) => {
+        // //Validation
+
         if (email) email.toLowerCase(); //NO CASE MATCHING!!!!!!
 
         process.nextTick(() => {
@@ -46,7 +48,7 @@ module.exports = passport => {
               return done(null, user);
             })
             .catch(err => {
-              if (err) return done(err);
+              if (err) return done(errors);
             });
         });
       }
